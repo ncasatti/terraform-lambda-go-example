@@ -1,7 +1,7 @@
 .PHONY: test clean
 
 test: deploy.done
-	curl -fsSL -D - "$$(terraform output -raw url)?name=Lamda"
+	curl -fsSL -D - "$$(terraform output -raw url)?name=Lambda"
 
 clean:
 	terraform destroy
